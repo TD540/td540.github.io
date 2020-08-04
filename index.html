@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>td540 design</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="Description" content="delightfully fun little apps for Apple platforms & the open web">
+    <meta property="og:title" content="td540 design">
+    <meta property="og:description" content="delightfully fun little apps for Apple platforms & the open web">
+    <meta property="og:url" content="https://td540.design">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:image" content="open_graph_logo.png">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="td540 design">
+    <style>
+    :root {
+        --main-color: black;
+        --bg-color: White;
+        --fg-color: #555;
+    }
+    html {
+        background-color: var(--bg-color);
+        color: var(--fg-color);
+        font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        line-height: 2;
+    }
+
+    abbr[title] {
+        text-decoration-style: wavy;
+        text-decoration-color: #ddd;
+    }
+
+    .logo {
+        font-weight: lighter;
+        font-size: 5rem;
+        line-height: 1;
+        color: var(--main-color);
+    }
+
+    .td {
+        font-weight: bold;
+    }
+
+    .logo:after {
+        display: block;
+        content: ".design";
+        font-size: 0.4em;
+    }
+    nav {
+        display: flex;
+        justify-content: center;
+    }
+    .button {
+        text-decoration: none;
+        font-size: 1.2rem;
+        font-weight: lighter;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        background-color: var(--fg-color);
+        color: var(--bg-color);
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 50%;
+        margin-left: 0.3rem;
+        margin-right: 0.3rem;
+        transition: all 1s;
+        box-shadow: 0 3px 60px 20px transparent, 0 5px 10px transparent;
+    }
+    .button:hover {
+        background-color: var(--main-color);
+        box-shadow: 0 3px 60px 5px var(--main-color), 0 2px 3px rgba(0,0,0,0.3);
+        transition: all 0.2s;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        :root {
+            --bg-color: black;
+            --fg-color: #CCC;
+            --main-color: white;
+        }
+    }
+    @media (min-width: 600px) {
+        .mobile-break {
+            display: none;
+        }
+        .logo:after {
+            display: inline-block;
+        }
+    }
+    </style>
+</head>
+
+<body>
+    <h1 class="logo"><span title="Thomas Decrick" class="td">td</span><span title="Five Forty">540</span></h1>
+    <p><em>delightfully fun little apps</em> <br class="mobile-break">for Apple&nbsp;platforms &amp;&nbsp;the&nbsp;open&nbsp;web</p>
+    <!-- <nav>
+        <a title="say hello" role="button" class="button" href="mailto:hello@td540.design">@</a>
+    </nav> -->
+</body>
+
+</html>
