@@ -26,24 +26,27 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        gap: 1rem;
+        gap: 2rem;
       }
       h1 {
         font-weight: lighter;
-        font-size: 2rem;
-        transition: font-size 0.2s;
+        font-size: 4rem;
         margin: 0;
+        transition: letter-spacing 0.3s ease-out, font-size 0.3s ease-out;
       }
-      h1 a {
-        color: inherit;
-        text-decoration: inherit;
-        opacity: 0.5;
-        cursor: default;
-        transition: all 0.2s;
+      h1:hover {
+        letter-spacing: -0.05em;
       }
-      h1 a:hover {
+      .follow {
         color: #1d9bf0;
-        opacity: 1;
+        text-decoration: inherit;
+        margin-right: 0.2rem;
+        transition: transform 0.3s ease-out, margin-right 0.3s ease-out;
+        display: inline-block;
+      }
+      .follow:hover {
+        transform: scale(1.618) rotate(-6.18deg);
+        margin-right: 1.618rem;
       }
       p {
         margin: 0;
@@ -51,32 +54,31 @@
       }
       .initials {
         font-weight: bold;
+        cursor: help;
       }
       .memoji {
         max-width: 100px;
-        transition: max-width 0.2s;
+        transition: max-width 0.3s ease-out;
       }
       .emojis {
-        padding: 0.2rem 1rem;
-        border-radius: 500px;
-        letter-spacing: 0.1rem;
-        font-size: 2rem;
-        background-color: white;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        display: flex;
+        gap: 1.618rem;
+        font-size: 3rem;
       }
       .emojis span {
-        transform: scale(2);
+        transition: transform 0.3s ease-out;
+        cursor: help;
+      }
+      .emojis span:hover {
+        transform: scale(1.618) rotate(-4deg);
       }
       abbr {
         text-decoration: none;
       }
       @media (prefers-color-scheme: dark) {
         :root {
-          background-color: rgba(0, 0, 0, 0.618);
+          background-color: rgba(0, 0, 0, 0.818);
           color: #c3c3c3;
-        }
-        .emojis {
-          box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
         }
       }
       @media (min-width: 768px) {
@@ -87,23 +89,25 @@
           font-size: 5rem;
         }
       }
+      small {
+        opacity: 0.5;
+        font-size: xx-small;
+      }
     </style>
   </head>
   <body>
     <img class="memoji" src="memoji.png" alt="td540 memoji" title="hello 🙂" />
     <h1>
-      <a title="follow" href="https://twitter.com/td540">@</a
+      <a class="follow" title="follow" href="https://twitter.com/td540">@</a
       ><span class="initials"><abbr title="Thomas Decrick">td</abbr></span
       >540
     </h1>
     <p>app designer developer</p>
-    <p>
-      <span class="emojis">
-        <span title="❤️ skateboarding">🛹</span>
-        <span title="❤️ snowboarding">🏂</span>
-        <span title="❤️ making apps">🤳</span>
-      </span>
+    <p class="emojis">
+      <span title="❤️ skateboarding">🛹</span>
+      <span title="❤️ snowboarding">🏂</span>
+      <span title="❤️ making apps">🤳</span>
     </p>
-    <p><span title="❤️">🌱</span></p>
+    <p class="emojis"><span title="❤️">🌱</span></p>
   </body>
 </html>
