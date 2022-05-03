@@ -50,8 +50,9 @@
       .initials:hover {
       }
       .memoji {
-        max-width: 100px;
+        max-width: 150px;
         transition: max-width 0.3s ease-out;
+        pointer-events: none;
       }
       abbr {
         text-decoration: none;
@@ -63,9 +64,6 @@
         }
       }
       @media (min-width: 768px) {
-        .memoji {
-          max-width: 200px;
-        }
         h1 {
           font-size: 10rem;
         }
@@ -73,7 +71,9 @@
     </style>
   </head>
   <body>
-    <img class="memoji" src="memoji.png" alt="td540 memoji" title="hello 🙂" />
+    <video class="memoji" poster="memoji.png" autoplay loop muted playsinline>
+      <source src="memoji.mov" />
+    </video>
     <h1>
       <a class="follow" title="follow" href="https://twitter.com/td540">@</a
       ><span class="initials"><abbr title="Thomas Decrick">td</abbr></span
