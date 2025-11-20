@@ -1,0 +1,62 @@
+html {
+    height: 100%;
+    overflow: hidden;
+}
+
+@supports (font: -apple-system-body) {
+    html {
+        font: -apple-system-body;
+    }
+}
+
+body {
+    height: 100%;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.memoji {
+    max-width: 200px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 1em;
+}
+
+a:link {
+    color: black;
+}
+
+a:visited {
+    color: darkgrey;
+}
+
+a:hover span {
+    color: blue;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        background-color: black;
+        color: darkgrey;
+    }
+
+    a:link {
+        color: white;
+    }
+
+    a:visited {
+        color: darkgrey;
+    }
+
+    a:hover span {
+        color: blue;
+    }
+}
